@@ -13,6 +13,7 @@ gem 'devise'
 gem 'haml'
 gem 'htmlentities'
 gem 'rack-ssl', :require => 'rack/ssl'   # force SSL
+gem 'rb-readline'
 
 gem 'useragent'
 gem 'decent_exposure'
