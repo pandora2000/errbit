@@ -1,0 +1,6 @@
+{
+  "environment": "production",
+  "run_list": [
+    "recipe[application::production_all]"
+  ]
+}
