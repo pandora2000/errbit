@@ -1,5 +1,5 @@
 upstream app {
-  server unix:/var/www/apps/errbit/current/public/tmp/sockets/unicorn.sock fail_timeout=0;
+  server unix:/var/www/apps/errbit/current/tmp/sockets/unicorn.sock fail_timeout=0;
 }
 
 server {
@@ -8,8 +8,8 @@ server {
 
   root /var/www/apps/errbit/current/public;
 
-  access_log <%= node['nginx']['log_dir'] %>/application-access.log ltsv;
-  error_log <%= node['nginx']['log_dir'] %>/application-error.log;
+  access_log <%= node['nginx']['log_dir'] %>/errbit-access.log ltsv;
+  error_log <%= node['nginx']['log_dir'] %>/errbit-error.log;
   rewrite_log on;
 
   error_page 500 502 503 504 /500.html;
